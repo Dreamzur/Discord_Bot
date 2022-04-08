@@ -29,7 +29,7 @@ public class Commands extends ListenerAdapter {
             EmbedBuilder info = new EmbedBuilder();
             info.setTitle("🤖 Info", null);
             info.setDescription("Studious Fellow is currently a work in progress.");
-            info.setColor(new Color(0x9C9CFA)); // sets the border color of embed
+            info.setColor(new Color(0x9180df)); // sets the border color of embed
             //info.addField("Embed field 1", "This is the content of field 1", false);
             //info.addField("Embed field 2", "This is the content of field 2", false);
             info.setFooter("Bot created by Logic ", event.getMember().getUser().getAvatarUrl());
@@ -44,6 +44,7 @@ public class Commands extends ListenerAdapter {
             help.addField("!info", "Gives information about the Studious Fellow bot.", false);
             help.addField("!help", "List of commands for the bot.", false);
             help.addField("!meme", "Drops some fresh memes from reddit.", false);
+            help.addField("!invite", "Allows Studious Fellow to pass out some croissants (invites) to your server", false);
             event.getChannel().sendMessageEmbeds(help.build()).queue();
             help.clear();
 
