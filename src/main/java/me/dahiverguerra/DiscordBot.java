@@ -17,6 +17,6 @@ public class DiscordBot {
              bot = JDABuilder.createDefault("OTU5NjEzNjQ1MzIxNTM1NDk4.Ykeb2Q.lKUTKAduDO_q1n1FA_qOrAEe1zM")
                 .setActivity(Activity.listening("lo-fi beats")) //sets the bot status
                 .addEventListeners(new Commands()) //adds the command class to the main
-                .build(); //builds the bot
+                .build(); //builds instance and starts login process
     }
 }

@@ -11,6 +11,7 @@ import java.awt.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.concurrent.ExecutionException;
 
 public class Commands extends ListenerAdapter {
 
@@ -85,6 +86,17 @@ public class Commands extends ListenerAdapter {
                 e.printStackTrace();
             }
 
+        } else if (args[0].equalsIgnoreCase(prefix + "invite")){
+            EmbedBuilder invite = new EmbedBuilder();
+            invite.setTitle("🤖 Invite: ");
+            invite.setColor(new Color(0xc399b2));
+            invite.setDescription("Invite me to your server by clicking " + "[here](" + "https://discord.com/api/oauth2/authorize?client_id="
+                    + event.getJDA().getSelfUser().getId() + "&permissions=8&scope=bot" + ")");
+            try {
+                event.getAuthor().openPrivateChannel().submit().get().sendMessageEmbeds(invite.build()).queue();
+            } catch (InterruptedException | ExecutionException e) {
+                e.printStackTrace();
+            }
         }
 
 
