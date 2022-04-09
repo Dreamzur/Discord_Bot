@@ -23,6 +23,7 @@ public class DiscordBot {
                 .addEventListeners(new Meme()) //adds the meme class to the main
                 .addEventListeners(new Invite()) //adds the invite class to the main
                 .addEventListeners(new Study()) //adds a study class to the main
+                .addEventListeners(new Pomodoro())
                 .build(); //builds instance and starts login process
     }
 }
