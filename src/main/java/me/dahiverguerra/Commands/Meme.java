@@ -53,6 +53,7 @@ public class Meme extends ListenerAdapter {
                 meme.setColor(new Color(0xA3FFF1)); //color of the embed
                 meme.setFooter("Posted by: " + author); //sets the footer of embed
                 event.getChannel().sendMessageEmbeds(meme.build()).queue(); //queues the embed
+                meme.clear();
 
             } catch (Exception e) {
                 event.getChannel().sendMessage(":no_entry: **My artificial brain seems to have imploded, try again later.**").queue(); //notifies user if something goes wrong

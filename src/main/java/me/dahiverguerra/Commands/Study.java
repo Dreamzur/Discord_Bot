@@ -22,6 +22,7 @@ public class Study extends ListenerAdapter {
             study.addField("!start", "This command starts the timer!", true);
             study.addField("!stop", "This command stops the timer!", true);
             event.getChannel().sendMessageEmbeds(study.build()).queue();
+            study.clear();
         }
     }
 }

@@ -27,6 +27,7 @@ public class Invite extends ListenerAdapter {
             } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
+            invite.clear();
         }
     }
 }
