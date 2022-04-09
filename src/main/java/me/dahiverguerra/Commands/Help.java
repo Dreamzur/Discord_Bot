@@ -21,7 +21,9 @@ public class Help extends ListenerAdapter {
             help.addField("!info", "Gives information about the Studious Fellow bot.", false);
             help.addField("!help", "List of commands for the bot.", false);
             help.addField("!meme", "Drops some fresh memes from reddit.", false);
-            help.addField("!invite", "Allows Studious Fellow to pass out some croissants (invites) to your server", false);
+            help.addField("!invite", "Allows Studious Fellow to pass out some croissants (invites) to your server.", false);
+            help.addField("!study", "Gives user instructions on how to use the 25 min. Pomodoro timer.", false);
+            help.addField("!start", "Starts the timer, enabling the study session.", false);
             event.getChannel().sendMessageEmbeds(help.build()).queue();
             help.clear();
         }
