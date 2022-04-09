@@ -1,9 +1,6 @@
 package me.dahiverguerra;
 
-import me.dahiverguerra.Commands.Help;
-import me.dahiverguerra.Commands.Info;
-import me.dahiverguerra.Commands.Meme;
-import me.dahiverguerra.Commands.Invite;
+import me.dahiverguerra.Commands.*;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -25,6 +22,7 @@ public class DiscordBot {
                 .addEventListeners(new Help()) //adds the help class to the main
                 .addEventListeners(new Meme()) //adds the meme class to the main
                 .addEventListeners(new Invite()) //adds the invite class to the main
+                .addEventListeners(new Study()) //adds a study class to the main
                 .build(); //builds instance and starts login process
     }
 }
