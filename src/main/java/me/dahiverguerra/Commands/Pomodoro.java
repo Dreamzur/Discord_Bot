@@ -35,6 +35,7 @@ public class Pomodoro extends ListenerAdapter {
 //                    event.getChannel().sendMessage("1 minute has passed").queue();
 //                }
 //            }
+            //TODO try to figure out how to effectively lower countdown timer on embed!
             int countdownSecs = 5;
             while(countdownSecs >= 0) {
                 countdownSecs--;
