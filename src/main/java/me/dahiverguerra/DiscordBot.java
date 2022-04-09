@@ -23,8 +23,8 @@ public class DiscordBot {
                 .setActivity(Activity.listening("lo-fi beats")) //sets the bot status
                 .addEventListeners(new Info()) //adds the info class to the main
                 .addEventListeners(new Help()) //adds the help class to the main
-                .addEventListeners(new Meme())
-                .addEventListeners(new Invite())
+                .addEventListeners(new Meme()) //adds the meme class to the main
+                .addEventListeners(new Invite()) //adds the invite class to the main
                 .build(); //builds instance and starts login process
     }
 }
