@@ -14,7 +14,7 @@ public class Coin extends ListenerAdapter {
     public void onMessageReceived(MessageReceivedEvent event) {
         String[] args = event.getMessage().getContentRaw().split(" ");
 
-        if (args[0].equalsIgnoreCase(prefix + "fc")) {
+        if (args[0].equalsIgnoreCase(prefix + "cf")) {
 
             EmbedBuilder coin = new EmbedBuilder();
 
