@@ -24,6 +24,7 @@ public class DiscordBot {
                 .addEventListeners(new Invite()) //adds the invite class to the main
                 .addEventListeners(new Study()) //adds a study class to the main
                 .addEventListeners(new Pomodoro()) //adds the pomodoro class to the main
+                .addEventListeners(new FortuneCookie()) //adds the FortuneCookie class to the main
                 .build(); //builds instance and starts login process
     }
 }
