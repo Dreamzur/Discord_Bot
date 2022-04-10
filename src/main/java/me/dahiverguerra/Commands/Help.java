@@ -27,6 +27,7 @@ public class Help extends ListenerAdapter {
             help.addField("`!start`", "*Starts the timer, enabling the study session.*", false);
             help.addField("`!cf`", "*Flips a coin in style.*", false);
             help.addField("`!fcookie`", "*Open up your very own fortune cookie.*", false);
+            help.addField("`!clear`", "*Type in !clear <number> to clear past messages*", false);
             event.getChannel().sendMessageEmbeds(help.build()).queue();
             help.clear();
         }
