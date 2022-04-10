@@ -19,6 +19,7 @@ public class DiscordBot {
         //Initializing the bot
         bot = JDABuilder.createDefault("OTU5NjEzNjQ1MzIxNTM1NDk4.Ykeb2Q.lKUTKAduDO_q1n1FA_qOrAEe1zM")
                 .setActivity(Activity.listening("lo-fi beats")) //sets the bot status
+                .addEventListeners(new Listener()) //lets main run listeners class
                 .addEventListeners(new Info()) //adds the info class to the main
                 .addEventListeners(new Help()) //adds the help class to the main
                 .addEventListeners(new Meme()) //adds the meme class to the main
