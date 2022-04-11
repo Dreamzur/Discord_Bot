@@ -1,5 +1,6 @@
 package me.dahiverguerra.Commands;
 
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -15,13 +16,15 @@ public class Clear extends ListenerAdapter {
         String[] args = event.getMessage().getContentRaw().split(" ");
 
         if (args[0].equalsIgnoreCase(prefix + "clear")) {
-            if (args.length != 2) {
-                return;
+            if (args.length < 2) {
+                EmbedBuilder nice = new EmbedBuilder();
+                nice.setTitle("Clear Command!");
+                nice.setDescription("Type in !clear <#> to clear some messages");
+                event.getChannel().sendMessageEmbeds(nice.build()).queue();
             }
             // if args 1 is not a number, return event message
             if (!isNumber(args[1])) {
                 event.getChannel().sendMessage("!clear amount").queue();
-                return;
             }
         }
 
