@@ -1,4 +1,4 @@
-package me.dahiverguerra;
+package me.dahiverguerra.utils;
 
 import io.github.cdimascio.dotenv.Dotenv;
 

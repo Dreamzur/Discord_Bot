@@ -1,6 +1,8 @@
 package me.dahiverguerra;
 
 import me.dahiverguerra.Commands.*;
+import me.dahiverguerra.utils.Config;
+import me.dahiverguerra.utils.Listener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -8,7 +10,7 @@ import net.dv8tion.jda.api.entities.Activity;
 import javax.security.auth.login.LoginException;
 
 public class DiscordBot {
-    public static JDA bot;
+    public static JDA jda;
     public static String prefix = "!";
 
 
@@ -17,7 +19,8 @@ public class DiscordBot {
 
 
         //Initializing the bot
-        bot = JDABuilder.createDefault(Config.get("TOKEN"))
+        jda = JDABuilder.createDefault(Config.get("TOKEN"))
+                // methods for the builder
                 .setActivity(Activity.listening("lo-fi beats")) //sets the bot status
                 .addEventListeners(new Listener()) //lets main run listeners class
                 .addEventListeners(new Info()) //adds the info class to the main
