@@ -20,6 +20,7 @@ public class FortuneCookie extends ListenerAdapter {
 
             cookie.setTitle("Your Fortune Cookie 🥠");
             cookie.setColor(new Color(0xc1e5e9));
+            // Unirest library is used to get info from the api
             cookie.addField("Your fortune cookie sprung open and reads:", new JSONObject(Unirest.get("http://www.yerkee.com/api/fortune").asString().getBody())
                     .getString("fortune"), false);
 

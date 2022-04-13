@@ -16,12 +16,13 @@ public class Info extends ListenerAdapter {
             EmbedBuilder info = new EmbedBuilder();
             info.setTitle("🤖 Info", null);
             info.setDescription("Studious Fellow is currently a work in progress.");
-            info.setColor(new Color(0x9180df)); // sets the border color of embed
-            //info.addField("Embed field 1", "This is the content of field 1", false);
-            //info.addField("Embed field 2", "This is the content of field 2", false);
+            // sets the border color of embed
+            info.setColor(new Color(0x9180df));
             info.setFooter("Bot created by Logic ", event.getMember().getUser().getAvatarUrl());
-            event.getChannel().sendMessageEmbeds(info.build()).queue(); //sends the message in the channel
-            info.clear(); //clear embed to save system resources
+            //sends the message in the channel
+            event.getChannel().sendMessageEmbeds(info.build()).queue();
+            //clear embed to save system resources
+            info.clear();
         }
     }
 }

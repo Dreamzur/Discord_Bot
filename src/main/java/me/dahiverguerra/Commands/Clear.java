@@ -28,6 +28,8 @@ public class Clear extends ListenerAdapter {
             }
         }
 
+        //Grab messages in the channel
+        //turns integer to string and delete count + 1
         List<Message> messageList = event.getChannel().getHistory().retrievePast(Integer.parseInt(args[1]) + 1).complete();
         event.getTextChannel().deleteMessages(messageList).queue();
     }

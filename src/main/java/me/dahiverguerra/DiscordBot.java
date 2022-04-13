@@ -21,17 +21,20 @@ public class DiscordBot {
         //Initializing the bot
         jda = JDABuilder.createDefault(Config.get("TOKEN"))
                 // methods for the builder
-                .setActivity(Activity.listening("lo-fi beats")) //sets the bot status
-                .addEventListeners(new Listener()) //lets main run listeners class
-                .addEventListeners(new Info()) //adds the info class to the main
-                .addEventListeners(new Help()) //adds the help class to the main
-                .addEventListeners(new Meme()) //adds the meme class to the main
-                .addEventListeners(new Invite()) //adds the invite class to the main
-                .addEventListeners(new Study()) //adds a study class to the main
-                .addEventListeners(new Pomodoro()) //adds the pomodoro class to the main
-                .addEventListeners(new FortuneCookie()) //adds the FortuneCookie class to the main
-                .addEventListeners(new Coin()) // adds the Coin (flip a coin) class to the main
-                .addEventListeners(new Clear()) // clears past messages
-                .build(); //builds instance and starts login process
+                //sets the bot status
+                //adds all the classes to the main
+                .setActivity(Activity.listening("lo-fi beats"))
+                .addEventListeners(new Listener())
+                .addEventListeners(new Info())
+                .addEventListeners(new Help())
+                .addEventListeners(new Meme())
+                .addEventListeners(new Invite())
+                .addEventListeners(new Study())
+                .addEventListeners(new Pomodoro())
+                .addEventListeners(new FortuneCookie())
+                .addEventListeners(new Coin())
+                .addEventListeners(new Clear())
+                //builds instance and starts login process
+                .build();
     }
 }

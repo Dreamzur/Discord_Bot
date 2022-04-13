@@ -56,7 +56,8 @@ public class Meme extends ListenerAdapter {
                 meme.clear();
 
             } catch (Exception e) {
-                event.getChannel().sendMessage(":no_entry: **My artificial brain seems to have imploded, try again later.**").queue(); //notifies user if something goes wrong
+                //notifies user if something goes wrong
+                event.getChannel().sendMessage(":no_entry: **My artificial brain seems to have imploded, try again later.**").queue();
                 e.printStackTrace();
             }
 
