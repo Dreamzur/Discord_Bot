@@ -20,7 +20,7 @@ public class DiscordBot {
 
         //Initializing the bot
         jda = JDABuilder.createDefault(Config.get("TOKEN"))
-                // methods for the builder
+                //methods for the builder
                 //sets the bot status
                 //adds all the classes to the main
                 .setActivity(Activity.listening("lo-fi beats"))
